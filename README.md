@@ -8,10 +8,6 @@ Portfolio homepage layout.
 - Solution URL: https://github.com/beatricemagana/grid-portfolio
 - Live Site URL: https://beatricemagana.github.io/grid-portfolio/
 
-#### Image of the live site:
-
-
-
 #### My process
 - Designed using Figma 
 - Watched many videos on CSS grid 
