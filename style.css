@@ -1,0 +1,202 @@
+@font-face {
+  font-family: SF Pro;
+  src: url(./fonts/sf-pro-text-regular.ttf);
+
+  font-family: Grand Royal;
+  src: url(./fonts/Grand\ Royal.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh auto;
+  margin: 64px;
+  background-color: #151313;
+  font-family: "SF Pro", Helvetica, sans-serif;
+}
+
+/* Header */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+
+.logo {
+  font-size: 2rem;
+  letter-spacing: 0.5rem;
+  color: #fff;
+  font-family: "Grand Royal", sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.navbar-links {
+  display: flex;
+}
+
+.navbar-links li {
+  list-style: none;
+}
+
+.navbar-links li a {
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 1rem;
+}
+
+.navbar-links li:hover {
+  background-color: #777;
+  border-radius: 5px;
+}
+
+.toggle-btn {
+  position: absolute;
+  top: 1.75rem;
+  right: 2rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+}
+
+.toggle-btn .bar {
+  height: 4px;
+  width: 100%;
+  background-color: #000;
+  border-radius: 10px;
+}
+
+/* Grid Main Section */
+.grid-container {
+  display: grid;
+  grid-gap: 0.5em;
+  grid-auto-rows: minmax(400px, auto);
+
+  grid-template-areas:
+    "box1 box2 box2"
+    "box3 box3 box4"
+    "box5 box6 box6";
+}
+
+.grid-container > div:nth-child(odd) {
+  background-color: #eee;
+}
+
+section div {
+  background-color: #777;
+}
+
+.box:hover{
+  opacity: .75;
+}
+
+.box-1 {
+  grid-area: box1;
+  background-image: url(./images/sam-wong-unsplash.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+
+.box-2 {
+  grid-area: box2;
+  background-image: url(./images/odayaka-gurei-unsplash.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+
+.box-3 {
+  grid-area: box3;
+  background-image: url(./images/clay-leconey-unsplash.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.box-4 {
+  grid-area: box4;
+  background-image: url(./images/cash-macanaya-unsplash.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.box-5 {
+  grid-area: box5;
+  background-image: url(./images/samson-vowles-unsplash.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.box-6 {
+  grid-area: box6;
+  background-image: url(./images/aphriell-art-unsplash.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+footer {
+  margin-top: 1.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer a {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+@media (max-width: 800px) {
+  body {
+    margin: 22px 22px 0 22px;
+  }
+  .toggle-btn {
+    display: flex;
+  }
+
+  .navbar-links {
+    display: none;
+    width: 100%;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-links {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .navbar-links li {
+    text-align: center;
+  }
+
+  .navbar-links li a {
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .grid-container {
+    grid-template-areas:
+      "box1"
+      "box2"
+      "box3"
+      "box4"
+      "box5"
+      "box6";
+  }
+}
